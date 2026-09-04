@@ -1,0 +1,261 @@
+.app {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 24px 20px;
+  background: #0f1526;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  overflow-y: auto;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-mark {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #6366f1, #ec4899);
+  box-shadow: 0 6px 18px rgba(99, 102, 241, 0.45);
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.brand p {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.panel h2 {
+  margin: 0 0 12px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--muted);
+}
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+}
+
+.tool {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 6px;
+  font-size: 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tool:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(99, 102, 241, 0.6);
+}
+
+.tool-icon {
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-weight: 700;
+}
+
+.tool-icon.rect {
+  background: #6366f1;
+  border-radius: 4px;
+}
+
+.tool-icon.ellipse {
+  background: #ec4899;
+  border-radius: 50%;
+}
+
+.tool-icon.text {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+}
+
+.swatch {
+  aspect-ratio: 1;
+  border-radius: 8px;
+  padding: 0;
+  border: 2px solid transparent;
+}
+
+.swatch.active {
+  border-color: #fff;
+  transform: scale(1.08);
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.field input[type='color'] {
+  width: 46px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  background: none;
+}
+
+.selection-panel {
+  margin-top: auto;
+}
+
+.selection-title {
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+
+.selection dl {
+  display: flex;
+  gap: 18px;
+  margin: 0 0 14px;
+}
+
+.selection dl div {
+  display: flex;
+  flex-direction: column;
+}
+
+.selection dt {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.selection dd {
+  margin: 0;
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+}
+
+.empty {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.danger {
+  width: 100%;
+  padding: 9px;
+  border-radius: 10px;
+  background: rgba(244, 63, 94, 0.15);
+  border: 1px solid rgba(244, 63, 94, 0.5);
+  color: #fda4af;
+  font-weight: 600;
+}
+
+.danger:hover {
+  background: rgba(244, 63, 94, 0.28);
+}
+
+.sidebar-footer {
+  font-size: 12px;
+  color: var(--muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 14px;
+}
+
+.stage {
+  padding: 28px;
+  display: grid;
+  place-items: stretch;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.12), transparent 45%),
+    radial-gradient(circle at 80% 70%, rgba(236, 72, 153, 0.12), transparent 45%);
+}
+
+.canvas {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  touch-action: none;
+}
+
+.canvas-hint {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  pointer-events: none;
+}
+
+.canvas-hint p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.shape {
+  position: absolute;
+  cursor: grab;
+  user-select: none;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+  display: grid;
+  place-items: center;
+}
+
+.shape:active {
+  cursor: grabbing;
+}
+
+.shape.rectangle {
+  border-radius: 10px;
+}
+
+.shape.ellipse {
+  border-radius: 50%;
+}
+
+.shape.text {
+  font-size: 24px;
+  font-weight: 700;
+  box-shadow: none;
+  text-align: center;
+}
+
+.shape.selected {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}

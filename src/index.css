@@ -1,0 +1,30 @@
+:root {
+  --bg: #0b1020;
+  --muted: #94a3b8;
+
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  color-scheme: dark;
+  color: #e2e8f0;
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  height: 100%;
+}
+
+button {
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+}
