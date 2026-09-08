@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "ideogram": {
+      "command": "npx",
+      "args": ["-y", "@qmediat.io/ideogram-mcp"],
+      "env": {
+        "IDEOGRAM_API_KEY": "${IDEOGRAM_API_KEY}",
+        "IDEOGRAM_OUTPUT_DIR": "${workspaceFolder}/design/motif/concepts"
+      }
+    },
+    "fashn": {
+      "command": "npx",
+      "args": ["-y", "fashn-mcp"],
+      "env": {
+        "FASHN_API_KEY": "${FASHN_API_KEY}"
+      }
+    }
+  }
+}
