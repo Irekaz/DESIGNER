@@ -1,16 +1,16 @@
 {
   "name": "DESIGNER",
-  "install": "npm ci",
+  "install": "cd waitlist && npm ci",
   "terminals": [
     {
-      "name": "dev",
-      "command": "npm run dev",
-      "description": "Vite dev server for the DESIGNER app on http://localhost:5173"
+      "name": "waitlist-dev",
+      "command": "cd waitlist && npm run dev",
+      "description": "Vite dev server for the DESIGNER waitlist landing on http://localhost:5173"
     }
   ],
   "ports": [
     {
-      "name": "vite",
+      "name": "waitlist",
       "port": 5173
     }
   ]
